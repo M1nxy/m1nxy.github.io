@@ -1,25 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import Navbar from '$lib/components/Navbar.svelte';
-  import { browser } from '$app/environment';
-
-  function setTheme() {
-    const elemHtmlClasses = document.documentElement.classList;
-    const mql = window.matchMedia('(prefers-color-scheme: dark)');
-    elemHtmlClasses.toggle('dark', mql.matches);
-    elemHtmlClasses.toggle('light', !mql.matches);
-    mql.onchange = () => {
-      elemHtmlClasses.toggle('dark', mql.matches);
-      elemHtmlClasses.toggle('light', !mql.matches);
-    };
-    console.log('Hello World!');
-  }
 </script>
-
-<svelte:head>
-  <!-- Workaround for a svelte parsing error: https://github.com/sveltejs/eslint-plugin-svelte/issues/492 -->
-  {@html `<\u{73}cript nonce="%sveltekit.nonce%">(${setTheme.toString()})();</script>`}
-</svelte:head>
 
 <div
   class="h-screen bg-[#F9F8F8] grid ease-in-out grid-rows-[auto_1fr] transition-all-[250ms] dark:(bg-[#080B0D] text-white)"
