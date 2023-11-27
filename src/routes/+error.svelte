@@ -1,37 +1,25 @@
 <script lang="ts">
-  import { page } from "$app/stores";
-  import { base } from "$app/paths";
+  import { page } from '$app/stores';
+  import { base } from '$app/paths';
 </script>
 
 <svelte:head>
   <title>
-    {$page.status} - {$page.error ? $page.error.message : "Not Found!"}
+    {$page.status} - {$page.error ? $page.error.message : 'Not Found!'}
   </title>
 </svelte:head>
 <main>
   <div class="error">
     <span class="status">{$page.status}</span>
     <div class="message">
-      <h1>{$page.error ? $page.error.message : "Not Found!"}</h1>
+      <h1>{$page.error ? $page.error.message : 'Not Found!'}</h1>
     </div>
   </div>
-  <a href={base}>Return Home!</a>
+  <a href="{base}/">Return Home!</a>
 </main>
 
 <style>
   main {
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
     height: 100%;
     display: flex;
     flex-direction: column;
