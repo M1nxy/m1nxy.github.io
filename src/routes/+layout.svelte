@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import Navbar from '$lib/components/Navbar.svelte';
+  import { browser } from '$app/environment';
 
   function setTheme() {
     const elemHtmlClasses = document.documentElement.classList;
@@ -12,7 +14,14 @@
       elemHtmlClasses.toggle('dark', mql.matches);
       elemHtmlClasses.toggle('light', !mql.matches);
     };
+    console.log('Hello World!');
   }
+
+  onMount(() => {
+    if (browser) {
+      setTheme();
+    }
+  });
 </script>
 
 <svelte:head>
