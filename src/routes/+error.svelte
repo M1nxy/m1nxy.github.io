@@ -1,30 +1,13 @@
 <script lang="ts">
-  import { base } from '$app/paths';
   import { page } from '$app/stores';
-  import Navbar from '$lib/components/Navbar.svelte';
-
-  function setTheme() {
-    const elemHtmlClasses = document.documentElement.classList;
-    const mql = window.matchMedia('(prefers-color-scheme: dark)');
-
-    elemHtmlClasses.toggle('dark', mql.matches);
-    elemHtmlClasses.toggle('light', !mql.matches);
-
-    mql.onchange = () => {
-      elemHtmlClasses.toggle('dark', mql.matches);
-      elemHtmlClasses.toggle('light', !mql.matches);
-    };
-  }
+  import { base } from '$app/paths';
 </script>
 
 <svelte:head>
-  <!-- Workaround for a svelte parsing error: https://github.com/sveltejs/eslint-plugin-svelte/issues/492 -->
-  {@html `<\u{73}cript nonce="%sveltekit.nonce%">(${setTheme.toString()})();</script>`}
   <title>
     {$page.status} - {$page.error ? $page.error.message : 'Not Found!'}
   </title>
 </svelte:head>
-
 <main>
   <div class="error">
     <span class="status">{$page.status}</span>
@@ -76,40 +59,5 @@
   }
   a:hover {
     text-decoration-color: currentColor;
-  }
-  div {
-    font-family:
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      'Noto Sans',
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
-  }
-
-  :global(a) {
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition: all ease-in-out 200ms;
-    @apply text-black/80;
-    &:hover {
-      @apply text-black;
-      text-decoration-color: currentColor;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      @apply text-white/80;
-      &:hover {
-        @apply text-white;
-      }
-    }
   }
 </style>

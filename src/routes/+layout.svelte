@@ -28,6 +28,16 @@
 </div>
 
 <style lang="scss">
+  @font-face {
+    font-family: 'wotfard';
+    src: url('/assets/fonts/wotfard-regular-webfont.eot');
+    src:
+      url('/assets/fonts/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
+      url('/assets/fonts/wotfard-regular-webfont.woff2') format('woff2'),
+      url('/assets/fonts/wotfard-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   div {
     font-family:
       ui-sans-serif,
