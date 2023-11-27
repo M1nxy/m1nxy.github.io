@@ -19,7 +19,7 @@ const config = {
 			base: ''
 		},
     prerender: {
-      handleHttpError: 'warn'
+      handleHttpError: 'ignore'
     }
 	}
 };

@@ -6,22 +6,14 @@
   function setTheme() {
     const elemHtmlClasses = document.documentElement.classList;
     const mql = window.matchMedia('(prefers-color-scheme: dark)');
-
     elemHtmlClasses.toggle('dark', mql.matches);
     elemHtmlClasses.toggle('light', !mql.matches);
-
     mql.onchange = () => {
       elemHtmlClasses.toggle('dark', mql.matches);
       elemHtmlClasses.toggle('light', !mql.matches);
     };
     console.log('Hello World!');
   }
-
-  onMount(() => {
-    if (browser) {
-      setTheme();
-    }
-  });
 </script>
 
 <svelte:head>
