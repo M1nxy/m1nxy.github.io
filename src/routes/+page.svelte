@@ -22,5 +22,5 @@
       projects and sidequests.
     </p>
   </div>
-  <img src="{base}/assets/images/profile-christmas.jpg" alt="yes" class="rounded-md m-auto w-65 md:w-75" />
+  <img src="{base}/assets/images/profile-christmas.webp" alt="yes" class="rounded-md m-auto w-65 md:w-75" />
 </main>
