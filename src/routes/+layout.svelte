@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="h-screen bg-[#F9F8F8] grid ease-in-out grid-rows-[auto_1fr] transition-all-[250ms] dark:(bg-[#080B0D] text-white)"
+  class="h-screen bg-[#F9F8F8] grid ease-in-out grid-rows-[auto_1fr] transition-all-[250ms] overflow-hidden dark:(bg-[#080B0D] text-white)"
 >
   <Navbar />
   <slot />
@@ -42,17 +42,10 @@
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: all ease-in-out 200ms;
-    @apply text-black/80;
+    @apply text-[#7F85FF];
     &:hover {
-      @apply text-black;
       text-decoration-color: currentColor;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      @apply text-white/80;
-      &:hover {
-        @apply text-white;
-      }
+      @apply text-[#9ca0ff];
     }
   }
 </style>
