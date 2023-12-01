@@ -5,7 +5,7 @@
 
 <svelte:head>
   <title>M1nxy</title>
-  <meta name="description" content="Basic demo site for github pages and sveltekit." />
+  <meta name="description" content="M1nxy's portfolio and personal website" />
 </svelte:head>
 
 <main class="flex flex-col-reverse m-auto text-justify w-full max-w-120 p-4 gap-8 md:(flex-row max-w-220 gap-4)">

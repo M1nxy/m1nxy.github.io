@@ -56,6 +56,11 @@
   const sortedProjects = projects.sort((a, b) => a.date.getTime() - b.date.getTime()).reverse();
 </script>
 
+<svelte:head>
+  <title>M1nxy - Projects</title>
+  <meta name="description" content="List of my projects past and present." />
+</svelte:head>
+
 <main class="container mx-auto m-2 w-full grid px-2 grid-rows-[auto_1fr] overflow-auto scroll-gutter justify-between">
   <h2 class="font-bold p-3 text-5xl">Projects</h2>
   <div class="flex flex-wrap h-[fit-content] p-2">
